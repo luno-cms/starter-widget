@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>記事詳細 — LUNO widget starter</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="home.html" class="site-logo">LUNO <span>Blog</span></a>
+  <nav class="site-nav">
+    <a href="index-sidebar.html">記事一覧</a>
+  </nav>
+</header>
+
+<main class="page page-with-sidebar">
+  <div class="widget-surface">
+    <div id="luno-article"
+         data-widget-id="YOUR_WIDGET_ID"
+         data-api-key="YOUR_PUBLIC_API_KEY"
+         data-api-url="https://YOUR_API_DOMAIN"
+         data-show-back="true"
+         data-back-label="← 記事一覧へ">
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-panel">
+      <h2>最新記事</h2>
+      <div data-luno-top
+           data-widget-id="YOUR_WIDGET_ID"
+           data-api-key="YOUR_PUBLIC_API_KEY"
+           data-api-url="https://YOUR_API_DOMAIN"
+           data-count="5"
+           data-heading="最新記事"
+           data-link-pattern="article.html?entry={slug}"
+           data-see-more-url="index-sidebar.html"
+           data-see-more-label="もっと見る">
+      </div>
+    </div>
+
+    <div class="sidebar-panel">
+      <h2>カテゴリ</h2>
+      <div data-luno-filter
+           data-api-key="YOUR_PUBLIC_API_KEY"
+           data-api-url="https://YOUR_API_DOMAIN"
+           data-type="category"
+           data-target="YOUR_WIDGET_ID">
+      </div>
+    </div>
+
+    <div class="sidebar-panel">
+      <h2>タグ</h2>
+      <div data-luno-filter
+           data-api-key="YOUR_PUBLIC_API_KEY"
+           data-api-url="https://YOUR_API_DOMAIN"
+           data-type="tags"
+           data-target="YOUR_WIDGET_ID">
+      </div>
+    </div>
+  </aside>
+</main>
+
+<footer class="site-footer">
+  Powered by <a href="https://luno.app" target="_blank" rel="noopener">LUNO</a>
+</footer>
+
+<!--
+  記事スラッグは URL クエリで渡します:
+    article.html?entry=my-post-slug
+    article.html?slug=my-post-slug
+-->
+<script src="https://YOUR_API_DOMAIN/public/v1/embed/YOUR_WIDGET_ID.js?api_key=YOUR_PUBLIC_API_KEY" async></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>記事一覧 — LUNO widget starter</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="home.html" class="site-logo">LUNO <span>Blog</span></a>
+  <nav class="site-nav">
+    <a href="index-sidebar.html">サイドバー版</a>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="page-intro">
+    <h1>記事一覧</h1>
+    <p>フィルターで絞り込みながら、embed ウィジェットの一覧を表示します。</p>
+  </div>
+
+  <div class="filters">
+    <div data-luno-filter
+         data-api-key="YOUR_PUBLIC_API_KEY"
+         data-api-url="https://YOUR_API_DOMAIN"
+         data-type="search"
+         data-layout="horizontal"
+         data-target="YOUR_WIDGET_ID"
+         data-placeholder="記事を検索...">
+    </div>
+
+    <div data-luno-filter
+         data-api-key="YOUR_PUBLIC_API_KEY"
+         data-api-url="https://YOUR_API_DOMAIN"
+         data-type="category"
+         data-layout="horizontal"
+         data-target="YOUR_WIDGET_ID">
+    </div>
+
+    <div data-luno-filter
+         data-api-key="YOUR_PUBLIC_API_KEY"
+         data-api-url="https://YOUR_API_DOMAIN"
+         data-type="monthly"
+         data-layout="horizontal"
+         data-target="YOUR_WIDGET_ID">
+    </div>
+
+    <div data-luno-filter
+         data-api-key="YOUR_PUBLIC_API_KEY"
+         data-api-url="https://YOUR_API_DOMAIN"
+         data-type="tags"
+         data-layout="horizontal"
+         data-target="YOUR_WIDGET_ID">
+    </div>
+  </div>
+
+  <div class="widget-surface" id="luno-list"
+       data-api-key="YOUR_PUBLIC_API_KEY"
+       data-api-url="https://YOUR_API_DOMAIN"
+       data-widget-id="YOUR_WIDGET_ID">
+  </div>
+</main>
+
+<footer class="site-footer">
+  Powered by <a href="https://luno.app" target="_blank" rel="noopener">LUNO</a>
+</footer>
+
+<script src="https://YOUR_API_DOMAIN/public/v1/embed/YOUR_WIDGET_ID.js?api_key=YOUR_PUBLIC_API_KEY" async></script>
+</body>
+</html>
